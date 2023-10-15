@@ -3,8 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>File Uploader</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
 </head>
 <body>
 
+<!--header-->
+<nav class="navbar navbar-light bg-light" style="background-color: #192a56 !important;">
+    <span class="navbar-brand mb-0 h1"
+          style="left:0; right:0; margin:auto; color: white !important;">Image Uploader</span>
+</nav>
+
+<!--body-->
+<section class="container mt-4">
+    <div class="row justify-content-around">
+        <div class="col-4">
+            <form>
+                <label class="pb-3" for="file">Select Image : </label>
+                <input id="file" name="myFile" type="file" class="form-control shadow">
+                <button type="button" class="btn btn-outline-danger mt-3" id="btnUpload">Upload Image</button>
+            </form>
+        </div>
+        <div class="col-5">
+            <img id="display" class="border border-1, w-100 rounded-4" style="height: 400px">
+            <button type="button" class="btn btn-outline-info mt-3" id="btnLoad">Load Image</button>
+        </div>
+    </div>
+</section>
+
 </body>
+<script src="assets/js/bootstrap.js"></script>
 </html>
