@@ -32,4 +32,31 @@
 
 </body>
 <script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/jquery-3.7.0.min.js"></script>
+<script>
+
+    $("#btnUpload").click(function () {
+        var formData = new FormData();
+        var imageInput = $("#file")[0].files[0];
+
+        if (imageInput) {
+            formData.append("image", imageInput);
+
+            $.ajax({
+                url: "http://localhost:8080/Back_End_war/file",
+                type: "POST",
+                data: formData,
+                contentType: false,
+                processData: false,
+                success: function (response) {
+                    // Handle the response from the server
+                    console.log("Image uploaded successfully: " + response);
+                }
+            });
+        } else {
+            alert("Please select an image to upload.");
+        }
+    });
+
+</script>
 </html>
