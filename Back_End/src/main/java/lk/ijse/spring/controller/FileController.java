@@ -1,8 +1,8 @@
 package lk.ijse.spring.controller;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import lk.ijse.spring.util.ResponseUtil;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 /**
  * @author : Gathsara
@@ -13,4 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/file")
 @CrossOrigin
 public class FileController {
+
+    @PostMapping
+    public void saveFile(MultipartFile file) {
+        System.out.println("req received");
+        System.out.println(file);
+        //return new ResponseUtil("OK", "File saved successfully", null);
+    }
 }
