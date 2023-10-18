@@ -2,7 +2,7 @@ package lk.ijse.spring.controller;
 
 import lk.ijse.spring.util.ResponseUtil;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
 /**
  * @author : Gathsara
@@ -15,9 +15,12 @@ import org.springframework.web.multipart.MultipartFile;
 public class FileController {
 
     @PostMapping
-    public void saveFile(MultipartFile file) {
+    public void saveFile(CommonsMultipartFile file) {
         System.out.println("req received");
-        System.out.println(file);
+
+       // String filename = file.getOriginalFilename();
+       // System.out.println(filename);
+
         //return new ResponseUtil("OK", "File saved successfully", null);
     }
 }
