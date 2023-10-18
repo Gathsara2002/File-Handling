@@ -37,26 +37,28 @@
 
     $("#btnUpload").click(function () {
 
+        var fileReader = new FileReader();
+
         var formData = new FormData();
         var imageInput = $("#file")[0].files[0];
 
-        if (imageInput) {
-            formData.append("image", imageInput);
+        fileReader.readAsDataURL(imageInput);
 
-            $.ajax({
-                url: "http://localhost:8080/Back_End_war/file",
-                type: "POST",
-                data: formData,
-                contentType: false,
-                processData: false,
-                success: function (response) {
-                    // Handle the response from the server
-                    console.log("Image uploaded successfully: " + response);
-                }
-            });
-        } else {
-            alert("Please select an image to upload.");
-        }
+        formData.append("image", imageInput);
+        console.log(formData);
+
+        $.ajax({
+            url: "http://localhost:8080/Back_End_war/file",
+            type: "POST",
+            data: formData,
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function (response) {
+                // Handle the response from the server
+                console.log("Image uploaded successfully: " + response);
+            }
+        });
     });
 
 </script>
