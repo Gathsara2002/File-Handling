@@ -1,14 +1,17 @@
 package lk.ijse.spring.service.impl;
 
 import lk.ijse.spring.dto.FileDTO;
+import lk.ijse.spring.entity.File;
 import lk.ijse.spring.repo.FileRepo;
 import lk.ijse.spring.service.FileService;
 import org.modelmapper.ModelMapper;
+import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author : Gathsara
@@ -27,11 +30,14 @@ public class FileServiceImpl implements FileService {
 
     @Override
     public void addFile(FileDTO dto) {
-repo.save();
+        File file = mapper.map(dto, File.class);
+        repo.save(file);
     }
 
     @Override
     public ArrayList<FileDTO> getAllFiles() {
-        return null;
+        List<File> all = repo.findAll();
+        return mapper.map(all, new TypeToken<ArrayList<FileDTO>>() {
+        }.getType());
     }
 }
