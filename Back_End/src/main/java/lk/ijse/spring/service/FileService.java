@@ -1,6 +1,6 @@
 package lk.ijse.spring.service;
 
-import lk.ijse.spring.dto.FileDTO;
+import lk.ijse.spring.dto.FileUploaderDTO;
 
 import java.util.ArrayList;
 
@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public interface FileService {
 
-    void addFile(FileDTO dto);
+    void addFile(FileUploaderDTO dto);
 
-    ArrayList<FileDTO> getAllFiles();
+    ArrayList<FileUploaderDTO> getAllFiles();
 }
