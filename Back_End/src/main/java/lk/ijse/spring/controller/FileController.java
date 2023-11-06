@@ -15,12 +15,9 @@ import org.springframework.web.multipart.commons.CommonsMultipartFile;
 public class FileController {
 
     @PostMapping
-    public void saveFile(CommonsMultipartFile file) {
+    public ResponseUtil saveFile(CommonsMultipartFile file) {
         System.out.println("req received");
 
-       // String filename = file.getOriginalFilename();
-       // System.out.println(filename);
-
-        //return new ResponseUtil("OK", "File saved successfully", null);
+        return new ResponseUtil("OK", "File saved successfully", null);
     }
 }
