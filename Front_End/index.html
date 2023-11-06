@@ -37,11 +37,11 @@
 
     $("#btnUpload").click(function () {
 
-        let data = $("#file")[0];
-        let formData = new FormData(data);
+        let formData = new FormData($("#fileUploadForm")[0]);
 
         $.ajax({
             url: "http://localhost:8080/Back_End_war/file",
+            method: "post",
             data: formData,
             contentType: false,
             processData: false,
@@ -54,6 +54,7 @@
             }
         });
     });
+
 
 </script>
 </html>
