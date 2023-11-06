@@ -17,7 +17,7 @@
 <section class="container mt-4">
     <div class="row justify-content-around">
         <div class="col-4">
-            <form>
+            <form id="fileUploadForm">
                 <label class="pb-3" for="file">Select Image : </label>
                 <input id="file" name="myFile" type="file" class="form-control shadow">
                 <button type="button" class="btn btn-outline-danger mt-3" id="btnUpload">Upload Image</button>
@@ -37,26 +37,20 @@
 
     $("#btnUpload").click(function () {
 
-        var fileReader = new FileReader();
-
-        var formData = new FormData();
-        var imageInput = $("#file")[0].files[0];
-
-        fileReader.readAsDataURL(imageInput);
-
-        formData.append("image", imageInput);
-        console.log(formData);
+        let data = $("#file")[0];
+        let formData = new FormData(data);
 
         $.ajax({
             url: "http://localhost:8080/Back_End_war/file",
-            type: "POST",
             data: formData,
-            cache: false,
             contentType: false,
             processData: false,
-            success: function (response) {
-                // Handle the response from the server
-                console.log("Image uploaded successfully: " + response);
+            success: function (resp) {
+                console.log(resp.data);
+
+            },
+            error: function (error) {
+                alert(error.responseJSON.message);
             }
         });
     });
