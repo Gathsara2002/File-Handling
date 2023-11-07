@@ -33,7 +33,7 @@ public class FileServiceImpl implements FileService {
 
     @Override
     public void addFile(FileUploaderDTO dto) {
-        FileUploader uploader = new FileUploader("1", "");
+        FileUploader uploader = new FileUploader("");
 
         try {
             String projectPath = new File(this.getClass().getProtectionDomain().getCodeSource().getLocation().toURI()).getParentFile().getParentFile().getAbsolutePath();
