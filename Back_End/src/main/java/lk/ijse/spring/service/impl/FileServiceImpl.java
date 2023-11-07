@@ -59,7 +59,7 @@ public class FileServiceImpl implements FileService {
     @Override
     public ArrayList<FileUploaderDTO> getAllFiles() {
         List<FileUploader> all = repo.findAll();
-        return mapper.map(all, new TypeToken<ArrayList<FileUploaderDTO>>() {
+        return mapper.map(all, new TypeToken<ArrayList<FileUploader>>() {
         }.getType());
     }
 }
