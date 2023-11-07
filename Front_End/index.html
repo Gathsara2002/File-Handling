@@ -24,7 +24,7 @@
             </form>
         </div>
         <div class="col-5">
-            <img id="display" class="border border-1, w-100 rounded-4" style="height: 400px">
+            <div id="display" class="border border-1, w-100 rounded-4" style="height: 400px"></div>
             <button type="button" class="btn btn-outline-info mt-3" id="btnLoad">Load Image</button>
         </div>
     </div>
@@ -34,6 +34,8 @@
 <script src="assets/js/bootstrap.js"></script>
 <script src="assets/js/jquery-3.7.0.min.js"></script>
 <script>
+
+    const baseurl = "http://localhost:8080/Back_End_war/";
 
     $("#btnUpload").click(function () {
 
@@ -48,6 +50,27 @@
             success: function (resp) {
                 console.log(resp.data);
 
+            },
+            error: function (error) {
+                alert(error.responseJSON.message);
+            }
+        });
+    });
+
+    $("#btnLoad").click(function () {
+
+        $.ajax({
+            url: "http://localhost:8080/Back_End_war/file",
+            method: "get",
+            contentType: "application/json",
+            dataType: "json",
+            success: function (resp) {
+                console.log(resp.data);
+                let files = resp.data;
+                for (const file of files) {
+                    $("#display").empty();
+                    $("#display").append(`<img src="${baseurl + file.myFile}" alt="">`)
+                }
             },
             error: function (error) {
                 alert(error.responseJSON.message);

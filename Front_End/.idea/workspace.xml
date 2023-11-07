@@ -10,20 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76b0a004-fe5d-4067-98bd-045a3dbaa689" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../File/File.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Back_End/src/main/java/lk/ijse/spring/config/WebAppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back_End/src/main/java/lk/ijse/spring/config/WebAppConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Back_End/src/main/java/lk/ijse/spring/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back_End/src/main/java/lk/ijse/spring/controller/FileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Back_End/src/main/java/lk/ijse/spring/dto/FileDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back_End/src/main/java/lk/ijse/spring/dto/FileUploaderDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Back_End/src/main/java/lk/ijse/spring/entity/FileUploader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back_End/src/main/java/lk/ijse/spring/entity/FileUploader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Back_End/src/main/java/lk/ijse/spring/repo/FileRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back_End/src/main/java/lk/ijse/spring/repo/FileRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Back_End/src/main/java/lk/ijse/spring/service/FileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back_End/src/main/java/lk/ijse/spring/service/FileService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Back_End/src/main/java/lk/ijse/spring/service/impl/FileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Back_End/src/main/java/lk/ijse/spring/service/impl/FileServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Back_End/target/Back_End-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../Back_End/target/Back_End-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Back_End/target/Back_End-1.0-SNAPSHOT/WEB-INF/classes/lk/ijse/spring/config/JPAConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Back_End/target/Back_End-1.0-SNAPSHOT/WEB-INF/classes/lk/ijse/spring/config/JPAConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Back_End/target/classes/lk/ijse/spring/config/JPAConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Back_End/target/classes/lk/ijse/spring/config/JPAConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Back_End_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Back_End_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -92,19 +82,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Tomcat 8.5.90" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.90" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/Back_End_war/" />
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -198,7 +175,8 @@
       <workItem from="1697641806598" duration="3192000" />
       <workItem from="1697726012657" duration="709000" />
       <workItem from="1699197148456" duration="2679000" />
-      <workItem from="1699278706215" duration="4591000" />
+      <workItem from="1699278706215" duration="4721000" />
+      <workItem from="1699369844325" duration="2308000" />
     </task>
     <servers />
   </component>
