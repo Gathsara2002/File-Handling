@@ -1,6 +1,7 @@
 package lk.ijse.spring.service;
 
 import lk.ijse.spring.dto.FileUploaderDTO;
+import lk.ijse.spring.entity.FileUploader;
 
 import java.util.ArrayList;
 

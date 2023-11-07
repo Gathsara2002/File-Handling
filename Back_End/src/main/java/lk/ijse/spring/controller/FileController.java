@@ -1,6 +1,7 @@
 package lk.ijse.spring.controller;
 
 import lk.ijse.spring.dto.FileUploaderDTO;
+import lk.ijse.spring.entity.FileUploader;
 import lk.ijse.spring.service.FileService;
 import lk.ijse.spring.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
