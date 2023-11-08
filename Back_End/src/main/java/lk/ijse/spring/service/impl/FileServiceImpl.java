@@ -36,7 +36,8 @@ public class FileServiceImpl implements FileService {
         FileUploader uploader = new FileUploader("");
 
         try {
-            String projectPath = new File(this.getClass().getProtectionDomain().getCodeSource().getLocation().toURI()).getParentFile().getParentFile().getAbsolutePath();
+            //String projectPath = new File(this.getClass().getProtectionDomain().getCodeSource().getLocation().toURI()).getParentFile().getParentFile().getAbsolutePath();
+            String projectPath = "E:\\MyProjects\\File_Handling_Spring\\File_Handling_Spring\\File";
             File file = new File(projectPath + "/File");
             System.out.println(projectPath);
             boolean isDirectoryExists = file.mkdir();
@@ -47,7 +48,7 @@ public class FileServiceImpl implements FileService {
             dto.getMyFile().transferTo(new File(file.getAbsolutePath() + "/" + dto.getMyFile().getOriginalFilename()));
             uploader.setMyFile("File/" + dto.getMyFile().getOriginalFilename());
 
-        } catch (IOException | URISyntaxException e) {
+        } catch (IOException  e) {
             throw new RuntimeException(e);
         }
 
