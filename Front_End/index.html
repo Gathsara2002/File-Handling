@@ -69,7 +69,8 @@
                 let files = resp.data;
                 for (const file of files) {
                     $("#display").empty();
-                    $("#display").append(`<img src="${baseurl + file.myFile}" alt="">`)
+                    // $("#display").append(`<img src="${"../File/" + file.myFile}" alt="">`)
+                    $("#display").append(`<img src="${file.myFile}" alt="">`);
                 }
             },
             error: function (error) {
