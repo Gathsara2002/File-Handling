@@ -59,8 +59,8 @@ public class FileServiceImpl implements FileService {
 
     @Override
     public ArrayList<FileUploaderDTO> getAllFiles() {
-        List<FileUploader> all = repo.findAll();
-        return mapper.map(all, new TypeToken<ArrayList<FileUploader>>() {
+//        List<FileUploader> all = repo.findAll();
+        return mapper.map(repo.findAll(), new TypeToken<ArrayList<FileUploader>>() {
         }.getType());
     }
 }
